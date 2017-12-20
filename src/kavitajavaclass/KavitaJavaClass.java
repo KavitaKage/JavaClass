@@ -1,21 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package kavitajavaclass;
 
-/**
- *
- * @author u1
- */
-public class KavitaJavaClass {
+import java.util.LinkedList;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+class Person
+{
+    
+}
+class A extends Person
+{}
+class TestQueue<T extends Person>
+{
+    public LinkedList<T> items=new LinkedList<>();
+    
+    public void enqueue(T item)
+    {
+        items.addLast(item);
     }
+    public T dequeue()
+    {
+        return items.removeFirst();
+    }
+}
+public class KavitaJavaClass
+{
+       public static void main(String[] args) 
+       {
+                 TestQueue<A> ob=new TestQueue<>();
+       }
     
 }
